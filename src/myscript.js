@@ -34,7 +34,7 @@ fetch(`https://api.github.com/orgs/${GITHUB_USERNAME}/repos`)
         const projectsContainer = document.getElementById("projects-container")
         projectsContainer.innerHTML += `
             <div>
-                <h3 class="text-3xl font-bold text-blue-900 my-1">${repo.name}</h3>
+                <a href="${repo.html_url}" target="_blank"><h3 class="text-3xl font-bold text-blue-900 my-1">${repo.name}</h3></a>
                 <p>${repo.description}</p>
             </div>
         `
