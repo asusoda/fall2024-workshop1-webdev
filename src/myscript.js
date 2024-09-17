@@ -25,3 +25,20 @@ var typed = new Typed("#text", {
     backDelay: 1000,
     loop: true,
 });
+
+const GITHUB_USERNAME = "asusoda"
+fetch(`https://api.github.com/orgs/${GITHUB_USERNAME}/repos`)
+.then(response => response.json())
+.then(repos => {
+    for(const repo of repos.slice(-3)) {
+        const projectsContainer = document.getElementById("projects-container")
+        projectsContainer.innerHTML += `
+            <div>
+                <h3 class="text-3xl font-bold text-blue-900 my-1">${repo.name}</h3>
+                <p>${repo.description}</p>
+            </div>
+        `
+        // <li><a href=${repo.html_url}>${repo.name}</a> - ${repo.description} (${repo.language})</li>
+    }
+
+});
