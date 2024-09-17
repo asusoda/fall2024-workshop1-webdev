@@ -2,23 +2,7 @@
 <html>
     <head>
         <title>My Portfolio Wesbite</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-              theme: {
-                extend: {
-                  colors: {
-                    clifford: '#da373d',
-                  }
-                },
-                backgroundImage: {
-                    "home": "url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==')",
-                }
-              }
-            }
-          </script>
-          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        </head>
+    </head>
     <body>
         <section class="h-screen flex items-center text-white bg-home bg-gray-800 bg-cover bg-fixed">
             <div class="max-w-3xl mx-20">
@@ -52,6 +36,34 @@
             </div>
         </section>
     </body>
-    <script src="script.js"></script>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                colors: {
+                clifford: '#da373d',
+                }
+            },
+            backgroundImage: {
+                "home": "url('https://images.unsplash.com/photo-1510906594845-bc082582c8cc?q=80&w=2044&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==')",
+            }
+            }
+        }
+
+        var typed = new Typed("#text", {
+            strings: [
+                "Student",
+                "Software Developer",
+                "Web Developer",
+                "Programmer",
+                "Learner",
+            ],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true,
+        });
+    </script>
 </html>
